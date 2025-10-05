@@ -85,3 +85,11 @@ def random_chars(number_char: int) -> str:
 
 #  2025-10-04 00:00:01.291730
 #  2025-10-05 00:00:02.045343
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
