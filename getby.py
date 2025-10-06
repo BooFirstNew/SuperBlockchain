@@ -93,3 +93,7 @@ def fire(self, *, reverse=False, **kwargs):
 def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption("--host", "-H", action="store", default=None)
 
+
+def create_option_by_env(env_name='JM_OPTION_PATH'):
+    from .cl import get_env
+
