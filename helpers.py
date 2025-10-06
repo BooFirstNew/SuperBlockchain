@@ -51,3 +51,8 @@ def maxpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_i = 0
     mat_j = 0
 
+
+def show_phase_response(filter_type: FilterType, samplerate: int) -> None:
+    """
+    Show phase response of a filter
+
