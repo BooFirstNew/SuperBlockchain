@@ -25,3 +25,4 @@ def maxpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_i = 0
     mat_j = 0
 
+#  2025-10-11 03:37:17.397412
