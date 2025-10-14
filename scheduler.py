@@ -26,3 +26,17 @@ def maxpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_j = 0
 
 #  2025-10-11 03:37:17.397412
+
+def pytest_configure(config):
+    global _config
+    _config = config
+
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
