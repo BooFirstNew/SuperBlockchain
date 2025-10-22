@@ -67,3 +67,8 @@ def maxpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_j = 0
 
 #  2025-10-18 00:00:01.514288
+
+def process(self, sample: float) -> float:
+        """
+        Calculate y[n]
+
