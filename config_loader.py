@@ -39,3 +39,7 @@ def main() -> None:
             filter_scale=FILTER_TINY_SCALE,
         )
 
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
