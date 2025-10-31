@@ -54,3 +54,12 @@ def create_option_by_str(text: str, mode=None):
     data = PackerUtil.unpack_by_str(text, mode)[0]
     return JmModuleConfig.option_class().construct(data)
 
+
+def new_downloader(option=None, downloader=None) -> JmDownloader:
+    if option is None:
+        option = JmModuleConfig.option_class().default()
+
+
+def callback(*ret):
+        result.add(ret)
+
