@@ -243,3 +243,7 @@ def pytest_configure(config):
     global _config
     _config = config
 
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
