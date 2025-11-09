@@ -115,3 +115,16 @@ def avgpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_i = 0
     mat_j = 0
 
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
+
+def fastsession(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.contrib.fasthttp import FastHttpSession
+
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
