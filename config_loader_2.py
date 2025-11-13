@@ -85,3 +85,8 @@ def main() -> None:
             filter_scale=FILTER_TINY_SCALE,
         )
 
+
+def process(self, sample: float) -> float:
+        """
+        Calculate y[n]
+
