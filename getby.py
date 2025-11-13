@@ -248,3 +248,7 @@ def pytest_addoption(parser: pytest.Parser) -> None:
     parser.addoption("--host", "-H", action="store", default=None)
 
 #  2025-11-11 04:06:49.466505
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
