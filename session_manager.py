@@ -18,3 +18,8 @@ def main() -> None:
         )
 
 #  2025-11-09 16:04:20.607956
+
+def fastsession(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.contrib.fasthttp import FastHttpSession
+
