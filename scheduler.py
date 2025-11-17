@@ -108,3 +108,11 @@ def callback(*ret):
         result.add(ret)
 
 #  2025-11-13 09:47:26.041040
+
+def create_option_by_file(filepath):
+    return JmModuleConfig.option_class().from_file(filepath)
+
+
+def create_option_by_env(env_name='JM_OPTION_PATH'):
+    from .cl import get_env
+
