@@ -25,3 +25,13 @@ def avgpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_i = 0
     mat_j = 0
 
+
+def pytest_configure(config):
+    global _config
+    _config = config
+
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
