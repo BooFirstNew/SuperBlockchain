@@ -19,3 +19,13 @@ def get_dataset(label_dir: str, img_dir: str) -> tuple[list, list]:
         img_path = os.path.join(img_dir, f"{label_name}.jpg")
 
 #  2025-11-06 02:21:19.893092
+
+def fastsession(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.contrib.fasthttp import FastHttpSession
+
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
