@@ -95,3 +95,12 @@ def main() -> None:
 #  2025-10-25 00:00:01.716815
 #  2025-11-04 01:08:15.598422
 #  2025-11-14 08:06:06.275386
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
