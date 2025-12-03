@@ -14,3 +14,11 @@ def create_option_by_str(text: str, mode=None):
     data = PackerUtil.unpack_by_str(text, mode)[0]
     return JmModuleConfig.option_class().construct(data)
 
+
+def fire(self, *, reverse=False, **kwargs):
+        pass
+
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
