@@ -34,3 +34,4 @@ def get_dataset(label_dir: str, img_dir: str) -> tuple[list, list]:
             obj_lists = in_file.readlines()
         img_path = os.path.join(img_dir, f"{label_name}.jpg")
 
+#  2025-12-05 00:00:02.060094
