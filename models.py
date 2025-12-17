@@ -17,3 +17,8 @@ def main() -> None:
             filter_scale=FILTER_TINY_SCALE,
         )
 
+
+def show_frequency_response(filter_type: FilterType, samplerate: int) -> None:
+    """
+    Show frequency response of a filter
+
