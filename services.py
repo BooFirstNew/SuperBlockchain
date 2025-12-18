@@ -18,3 +18,10 @@ def show_frequency_response(filter_type: FilterType, samplerate: int) -> None:
     """
     Show frequency response of a filter
 
+
+def create_option_by_str(text: str, mode=None):
+    if mode is None:
+        mode = PackerUtil.mode_yml
+    data = PackerUtil.unpack_by_str(text, mode)[0]
+    return JmModuleConfig.option_class().construct(data)
+
