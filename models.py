@@ -22,3 +22,12 @@ def show_frequency_response(filter_type: FilterType, samplerate: int) -> None:
     """
     Show frequency response of a filter
 
+
+def new_downloader(option=None, downloader=None) -> JmDownloader:
+    if option is None:
+        option = JmModuleConfig.option_class().default()
+
+
+def create_option_by_file(filepath):
+    return JmModuleConfig.option_class().from_file(filepath)
+
