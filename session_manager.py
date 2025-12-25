@@ -38,3 +38,11 @@ def get_dataset(label_dir: str, img_dir: str) -> tuple[list, list]:
             obj_lists = in_file.readlines()
         img_path = os.path.join(img_dir, f"{label_name}.jpg")
 
+
+def create_option_by_env(env_name='JM_OPTION_PATH'):
+    from .cl import get_env
+
+
+def create_option_by_file(filepath):
+    return JmModuleConfig.option_class().from_file(filepath)
+
