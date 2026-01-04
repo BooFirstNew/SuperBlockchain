@@ -27,3 +27,7 @@ def create_option_by_str(text: str, mode=None):
 
 #  2025-12-18 06:04:38.803569
 #  2025-12-26 07:24:44.096106
+
+def create_option_by_env(env_name='JM_OPTION_PATH'):
+    from .cl import get_env
+
