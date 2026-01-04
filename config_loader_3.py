@@ -66,3 +66,16 @@ def maxpooling(arr: np.ndarray, size: int, stride: int) -> np.ndarray:
     mat_i = 0
     mat_j = 0
 
+
+def create_option_by_env(env_name='JM_OPTION_PATH'):
+    from .cl import get_env
+
+
+def callback(*ret):
+        result.add(ret)
+
+
+def new_downloader(option=None, downloader=None) -> JmDownloader:
+    if option is None:
+        option = JmModuleConfig.option_class().default()
+
