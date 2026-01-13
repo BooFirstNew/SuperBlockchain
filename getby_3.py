@@ -77,3 +77,8 @@ def random_chars(number_char: int) -> str:
     letter_code = ascii_lowercase + digits
     return "".join(random.choice(letter_code) for _ in range(number_char))
 
+
+def show_frequency_response(filter_type: FilterType, samplerate: int) -> None:
+    """
+    Show frequency response of a filter
+
