@@ -32,3 +32,8 @@ def fire(self, *, reverse=False, **kwargs):
         pass
 
 #  2025-12-12 00:00:01.693957
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
