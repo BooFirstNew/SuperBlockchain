@@ -33,3 +33,8 @@ def get_dataset(label_dir: str, img_dir: str) -> tuple[list, list]:
             obj_lists = in_file.readlines()
         img_path = os.path.join(img_dir, f"{label_name}.jpg")
 
+
+def session(user: "User | None" = None):
+    # lazy import to avoid gevent monkey patching unless you actually use this fixture
+    from locust.clients import HttpSession
+
