@@ -23,3 +23,12 @@ def get_dataset(label_dir: str, img_dir: str) -> tuple[list, list]:
             obj_lists = in_file.readlines()
         img_path = os.path.join(img_dir, f"{label_name}.jpg")
 
+
+def pytest_configure(config):
+    global _config
+    _config = config
+
+
+def pytest_addoption(parser: pytest.Parser) -> None:
+    parser.addoption("--host", "-H", action="store", default=None)
+
